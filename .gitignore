@@ -1,2 +1,6 @@
 *.cbp
+*.depend
 plan/
+bin/
+obj/
+Uzytkownicy.txt

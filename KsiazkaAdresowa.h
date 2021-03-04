@@ -5,9 +5,10 @@
 using namespace std;
 
 class KsiazkaAdresowa{
+//    const string nazwaPliku;
     UzytkownikMenedzer uzytkownikMenedzer;
 public:
-    KsiazkaAdresowa();
+    KsiazkaAdresowa(string nazwaPlikuZUzytkownikami) : uzytkownikMenedzer(nazwaPlikuZUzytkownikami){};
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
 };

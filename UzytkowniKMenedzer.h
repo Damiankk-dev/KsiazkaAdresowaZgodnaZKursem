@@ -19,6 +19,7 @@ class UzytkownikMenedzer{
     Uzytkownik podajDaneNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
     int pobierzIdNowegoUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
 
 
 public:
@@ -26,5 +27,5 @@ public:
     void wczytajUzytkownikowZPliku();
     void rejestracjaUzytkownika();
     void wypiszWszystkichUzytkownikow();
-
+    void logowanieUzytkownika();
 };

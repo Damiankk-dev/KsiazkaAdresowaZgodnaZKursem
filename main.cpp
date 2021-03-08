@@ -8,8 +8,6 @@ int main()
 {
     KsiazkaAdresowa ksiazkaAresowa("users.txt");
     ksiazkaAresowa.wypiszWszystkichUzytkownikow();
-    ksiazkaAresowa.rejestracjaUzytkownika();
-    ksiazkaAresowa.rejestracjaUzytkownika();
-    ksiazkaAresowa.wypiszWszystkichUzytkownikow();
+    ksiazkaAresowa.logowanieUzytkownika();
     return 0;
 }

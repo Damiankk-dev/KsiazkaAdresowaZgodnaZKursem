@@ -19,6 +19,7 @@ class UzytkownikMenedzer{
     Uzytkownik podajDaneNowegoUzytkownika();
     bool czyIstniejeLogin(string login);
     int pobierzIdNowegoUzytkownika();
+    int pobierzIdZalogowanegoUzytkownika();
 
 
 public:

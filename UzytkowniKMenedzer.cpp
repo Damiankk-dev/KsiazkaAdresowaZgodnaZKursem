@@ -39,7 +39,8 @@ void UzytkownikMenedzer::rejestracjaUzytkownika(){
 
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
     system("pause");
-}void UzytkownikMenedzer::wypiszWszystkichUzytkownikow(){
+}
+void UzytkownikMenedzer::wypiszWszystkichUzytkownikow(){
     for (int i = 0; i < uzytkownicy.size(); i++){
         cout << uzytkownicy[i].pobierzId() << endl;
         cout << uzytkownicy[i].pobierzLogin() << endl;
@@ -52,6 +53,9 @@ void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
 }
 
 void UzytkownikMenedzer::logowanieUzytkownika(){
+    idZalogowanegoUzytkownika = UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika();
+}
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){
     Uzytkownik uzytkownik;
     MetodyPomocnicze metodyPomocnicze;
     string login = "", haslo = "";
@@ -73,17 +77,17 @@ void UzytkownikMenedzer::logowanieUzytkownika(){
                 {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
-                    idZalogowanegoUzytkownika = itr->pobierzId();
+                    return itr->pobierzId();
                 }
             }
             cout << "Wprowadzono 3 razy bledne haslo." << endl;
             system("pause");
-            idZalogowanegoUzytkownika = 0;
+            return 0;
         }
         itr++;
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
-    idZalogowanegoUzytkownika =  0;
+    return 0;
 }
 

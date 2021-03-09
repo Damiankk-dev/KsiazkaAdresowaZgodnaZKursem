@@ -9,5 +9,7 @@ int main()
     KsiazkaAdresowa ksiazkaAresowa("Uzytkownicy.txt");
     ksiazkaAresowa.wypiszWszystkichUzytkownikow();
     ksiazkaAresowa.logowanieUzytkownika();
+    ksiazkaAresowa.zmianaHaslaZalogowanegoUzytkownika();
+    ksiazkaAresowa.logowanieUzytkownika();
     return 0;
 }

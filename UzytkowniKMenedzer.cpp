@@ -90,4 +90,22 @@ int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){
     system("pause");
     return 0;
 }
+void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
+{
+    MetodyPomocnicze metodyPomocnicze;
+    string noweHaslo = "";
+    cout << "Podaj nowe haslo: ";
+    noweHaslo = metodyPomocnicze.wczytajLinie();
+
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
+    {
+        if (itr ->pobierzId() == idZalogowanegoUzytkownika)
+        {
+            itr ->ustawHaslo(noweHaslo);
+            cout << "Haslo zostalo zmienione." << endl << endl;
+            system("pause");
+        }
+    }
+//    zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
+}
 

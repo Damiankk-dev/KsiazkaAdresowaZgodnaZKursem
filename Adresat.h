@@ -13,6 +13,7 @@ class Adresat{
     string numerTelefonu;
     string email;
     string adres;
+
 public:
     void ustawId(int noweId);
     void ustawImie(string noweImie);
@@ -20,6 +21,13 @@ public:
     void ustawNumerTelefonu(string nowyNrTelefonu);
     void ustawEmail(string nowyEmail);
     void ustawAdres(string nowyAdres);
+
+    int pobierzId();
+    string pobierzImie();
+    string pobierzNazwisko();
+    string pobierzNumerTelefonu();
+    string pobierzEmail();
+    string pobierzAdres();
 };
 
 #endif // ADRESAT_H

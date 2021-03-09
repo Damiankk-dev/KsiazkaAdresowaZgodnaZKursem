@@ -20,7 +20,6 @@ class UzytkownikMenedzer{
     bool czyIstniejeLogin(string login);
     int pobierzIdNowegoUzytkownika();
     int pobierzIdZalogowanegoUzytkownika();
-    void zerujIdZalogowanegoUzytkownika();
 
 
 public:

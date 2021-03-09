@@ -10,6 +10,7 @@ int main()
     ksiazkaAresowa.wypiszWszystkichUzytkownikow();
     ksiazkaAresowa.logowanieUzytkownika();
     ksiazkaAresowa.zmianaHaslaZalogowanegoUzytkownika();
-    ksiazkaAresowa.logowanieUzytkownika();
+    ksiazkaAresowa.wylogowanieUzytkownika();
+    ksiazkaAresowa.zmianaHaslaZalogowanegoUzytkownika();
     return 0;
 }

@@ -36,5 +36,5 @@ string Adresat::pobierzEmail(){
     return email;
 }
 string Adresat::pobierzAdres(){
-    return adres
+    return adres;
 }

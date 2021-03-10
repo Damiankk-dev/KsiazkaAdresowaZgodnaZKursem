@@ -7,6 +7,7 @@ using namespace std;
 
 class Adresat{
     int id;
+//    const int idZalogowanegoUzytkownika;
     string imie;
     string nazwisko;
     string numerTelefonu;
@@ -14,6 +15,7 @@ class Adresat{
     string adres;
 
 public:
+//    Adresat(int IDZALOGOWANEGOUZYTKOWNIKA) : idZalogowanegoUzytkownika(IDZALOGOWANEGOUZYTKOWNIKA){};
     void ustawId(int noweId);
     void ustawImie(string noweImie);
     void ustawNazwisko(string noweNazwisko);

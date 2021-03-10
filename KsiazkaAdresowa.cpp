@@ -7,7 +7,7 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow(){
     uzytkownikMenedzer.wypiszWszystkichUzytkownikow();
 }
 void KsiazkaAdresowa::logowanieUzytkownika() {
-    uzytkownikMenedzer.logowanieUzytkownika();
+    adresatMenedzer.idZalogowanegoUzytkownika = uzytkownikMenedzer.logowanieUzytkownika();
 }
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika() {
     uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
@@ -17,6 +17,9 @@ void KsiazkaAdresowa::wylogowanieUzytkownika(){
 }
 void KsiazkaAdresowa::dodajAdresata(){
     cout << adresatMenedzer.dodajAdresata() << endl;
+}
+void KsiazkaAdresowa::wyswietlAdresatow(){
+    adresatMenedzer.wyswietlWszystkichAdresatow();
 }
 
 

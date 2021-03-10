@@ -52,10 +52,7 @@ void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
-void UzytkownikMenedzer::logowanieUzytkownika(){
-    idZalogowanegoUzytkownika = UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika();
-}
-int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){
+int UzytkownikMenedzer::logowanieUzytkownika(){
     Uzytkownik uzytkownik;
     MetodyPomocnicze metodyPomocnicze;
     string login = "", haslo = "";

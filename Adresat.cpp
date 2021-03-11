@@ -4,6 +4,9 @@
 void Adresat::ustawId(int noweId){
     if (noweId >= 0) id = noweId;
 }
+void Adresat::ustawIdZalogowanegoUzytkownika(int noweIdZalogowanegoUzytkownika){
+    idZalogowanegoUzytkownika = noweIdZalogowanegoUzytkownika;
+}
 void Adresat::ustawImie(string noweImie){
     imie = noweImie;
 }
@@ -22,6 +25,9 @@ void Adresat::ustawAdres(string nowyAdres){
 
 int Adresat::pobierzId(){
     return id;
+}
+int Adresat::pobierzIdZalogowanegoUzytkownika(){
+    return idZalogowanegoUzytkownika;
 }
 string Adresat::pobierzImie(){
     return imie;

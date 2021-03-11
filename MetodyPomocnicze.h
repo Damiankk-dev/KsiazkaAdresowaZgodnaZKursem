@@ -15,6 +15,8 @@ public:
     string konwerjsaIntNaString(int liczba);
     string wczytajLinie();
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
+    string pobierzLiczbe(string tekst, int pozycjaZnaku);
+    int konwersjaStringNaInt(string liczba);
 };
 
 

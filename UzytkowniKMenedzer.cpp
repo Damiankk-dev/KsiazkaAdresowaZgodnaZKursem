@@ -52,10 +52,7 @@ void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
-void UzytkownikMenedzer::logowanieUzytkownika(){
-    idZalogowanegoUzytkownika = UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika();
-}
-int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){
+int UzytkownikMenedzer::logowanieUzytkownika(){
     Uzytkownik uzytkownik;
     MetodyPomocnicze metodyPomocnicze;
     string login = "", haslo = "";
@@ -108,10 +105,11 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
     }
     plikZUzytkownikami.zapiszWszystkichUzytkownikowDoPliku(uzytkownicy);
 }
-void UzytkownikMenedzer::wylogowanieUzytkownika(){
+int UzytkownikMenedzer::wylogowanieUzytkownika(){
     idZalogowanegoUzytkownika = 0;
     system("cls");
     cout << endl << "Wylogowano uzytkownika" << endl << endl;
     system("pause");
+    return idZalogowanegoUzytkownika;
 }
 

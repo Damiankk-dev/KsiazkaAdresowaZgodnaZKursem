@@ -12,18 +12,18 @@
 using namespace std;
 
 class AdresatMenadzer{
+    const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
 
 public:
     int idOstatniegoAdresata; //to ma byc tylko w pliku z adresatami, ale to nie stala, wiec nie teraz
-    int idZalogowanegoUzytkownika;
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
 
-    AdresatMenadzer(string nazwaPlikuZAdresatami)
+    AdresatMenadzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
     : plikZAdresatami(nazwaPlikuZAdresatami)
+    , ID_ZALOGOWANEGO_UZYTKOWNIKA(idZalogowanegoUzytkownika)
     {
         idOstatniegoAdresata = 0;
-        idZalogowanegoUzytkownika = 0;
     };
     int dodajAdresata();
     Adresat podajDaneNowegoAdresata();

@@ -1,5 +1,7 @@
 #include "UzytkowniKMenedzer.h"
-
+int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika(){
+    return idZalogowanegoUzytkownika;
+}
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika(){
     Uzytkownik uzytkownik;
 

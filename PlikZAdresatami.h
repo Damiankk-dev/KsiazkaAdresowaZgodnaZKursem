@@ -12,14 +12,15 @@
 using namespace std;
 
 class PlikZAdresatami{
-
     const string NAZWA_PLIKU_Z_ADRESATAMI;
+    int idOstatniegoAdresata;
+
 public:
     PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami)
     {
     };
-    int idOstatniegoAdresata;
 
+    int pobierzIdOstatniegoAdresata();
     void dopiszAdresataDoPliku(Adresat adresat);
     string zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat);
     bool czyPlikJestPusty();

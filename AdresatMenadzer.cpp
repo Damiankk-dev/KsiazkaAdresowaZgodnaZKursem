@@ -18,7 +18,6 @@ Adresat AdresatMenadzer::podajDaneNowegoAdresata()
     MetodyPomocnicze metodyPomocznicze;
 
     adresat.ustawId(++idOstatniegoAdresata);
-    adresat.ustawIdZalogowanegoUzytkownika(idZalogowanegoUzytkownika);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(metodyPomocznicze.wczytajLinie());

@@ -14,7 +14,7 @@ using namespace std;
 class AdresatMenadzer{
 
 public:
-    int idOstatniegoAdresata;
+    int idOstatniegoAdresata; //to ma byc tylko w pliku z adresatami, ale to nie stala, wiec nie teraz
     int idZalogowanegoUzytkownika;
     vector<Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;

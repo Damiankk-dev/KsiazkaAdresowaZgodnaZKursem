@@ -18,6 +18,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat){
         {
             plikTekstowy << endl << liniaZDanymiAdresata ;
         }
+        idOstatniegoAdresata++;
     }
     else
     {
@@ -26,7 +27,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat){
     plikTekstowy.close();
     system("pause");
 }
-vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(int& idZalogowanegoUzytkownika)
+vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(const int idZalogowanegoUzytkownika)
 {
     Adresat adresat;
     vector<Adresat> adresaci;
@@ -52,19 +53,13 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
         cout << "Nie udalo sie otworzyc pliku i wczytac danych." << endl;
 
     plikTekstowy.close();
-//    cout << "dane: " << daneOstaniegoAdresataWPliku << endl;
-//    system("pause");
     if (daneOstaniegoAdresataWPliku != "")
     {
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
-//        cout << "Id ostatniego adresata: " << idOstatniegoAdresata << endl;
-//        system("pause");
     }
     else
         idOstatniegoAdresata =  0;
 
-//    cout << "Id ostatniego adresata: " << idOstatniegoAdresata << endl;
-//    system("pause");
     return adresaci;
 }
 string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(Adresat adresat)

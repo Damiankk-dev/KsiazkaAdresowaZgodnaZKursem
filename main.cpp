@@ -8,7 +8,6 @@ int main()
 {
     KsiazkaAdresowa ksiazkaAresowa("Uzytkownicy.txt", "Adresaci.txt");
     ksiazkaAresowa.wypiszWszystkichUzytkownikow();
-    ksiazkaAresowa.rejestracjaUzytkownika();
     ksiazkaAresowa.logowanieUzytkownika();
     ksiazkaAresowa.wyswietlAdresatow();
     ksiazkaAresowa.dodajAdresata();
@@ -16,7 +15,6 @@ int main()
     ksiazkaAresowa.dodajAdresata();
     ksiazkaAresowa.zmianaHaslaZalogowanegoUzytkownika();
     ksiazkaAresowa.wylogowanieUzytkownika();
-    ksiazkaAresowa.rejestracjaUzytkownika();
     ksiazkaAresowa.wypiszWszystkichUzytkownikow();
     ksiazkaAresowa.logowanieUzytkownika();
     ksiazkaAresowa.zmianaHaslaZalogowanegoUzytkownika();

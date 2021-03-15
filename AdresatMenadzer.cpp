@@ -1,6 +1,6 @@
 #include "AdresatMenadzer.h"
 
-int AdresatMenadzer::dodajAdresata(){
+void AdresatMenadzer::dodajAdresata(){
     Adresat adresat;
 
     system("cls");
@@ -9,15 +9,15 @@ int AdresatMenadzer::dodajAdresata(){
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
-
-    return idOstatniegoAdresata;
+    plikZAdresatami.czyPlikJestPusty();
 }
 Adresat AdresatMenadzer::podajDaneNowegoAdresata()
 {
     Adresat adresat;
     MetodyPomocnicze metodyPomocznicze;
 
-    adresat.ustawId(++idOstatniegoAdresata);
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1 );
+    adresat.ustawIdZalogowanegoUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(metodyPomocznicze.wczytajLinie());

@@ -13,10 +13,10 @@ using namespace std;
 
 class AdresatMenadzer{
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
+    PlikZAdresatami plikZAdresatami;
 
 public:
     vector<Adresat> adresaci;
-    PlikZAdresatami plikZAdresatami;
 
     AdresatMenadzer(string nazwaPlikuZAdresatami, int idZalogowanegoUzytkownika)
     : plikZAdresatami(nazwaPlikuZAdresatami)

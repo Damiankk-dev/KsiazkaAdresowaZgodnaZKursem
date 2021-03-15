@@ -10,7 +10,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat){
     {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
 
-        if (czyPlikJestPusty() == true)
+        if (metodyPomocnicze.czyPlikJestPusty(NAZWA_PLIKU_Z_ADRESATAMI) == true)
         {
             plikTekstowy << liniaZDanymiAdresata;
         }
@@ -76,17 +76,6 @@ string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKre
     liniaZDanymiAdresata += adresat.pobierzAdres() + '|';
 
     return liniaZDanymiAdresata;
-}
-bool PlikZAdresatami::czyPlikJestPusty(){
-    fstream plikTekstowy;
-    plikTekstowy.open(NAZWA_PLIKU_Z_ADRESATAMI.c_str(), ios::app);
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
-
-    plikTekstowy.close();
 }
 int PlikZAdresatami::pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami)
 {

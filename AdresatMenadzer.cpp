@@ -2,6 +2,7 @@
 
 void AdresatMenadzer::dodajAdresata(){
     Adresat adresat;
+    MetodyPomocnicze metodyPomocnicze;
 
     system("cls");
     cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
@@ -9,7 +10,6 @@ void AdresatMenadzer::dodajAdresata(){
 
     adresaci.push_back(adresat);
     plikZAdresatami.dopiszAdresataDoPliku(adresat);
-    plikZAdresatami.czyPlikJestPusty();
 }
 Adresat AdresatMenadzer::podajDaneNowegoAdresata()
 {

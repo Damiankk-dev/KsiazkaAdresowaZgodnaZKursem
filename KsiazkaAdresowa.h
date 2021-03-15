@@ -29,7 +29,7 @@ public:
     void wylogowanieUzytkownika();
     void dodajAdresata();
     void wyswietlAdresatow();
-    bool czyUzytkownikJestZalogowany();
     void wyswietlMenuGlowne();
     void wyswietlPodmenuUzytkownika();
+    bool czyUzytkownikJestZalogowany();
 };

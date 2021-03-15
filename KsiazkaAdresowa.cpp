@@ -24,5 +24,15 @@ void KsiazkaAdresowa::dodajAdresata(){
 void KsiazkaAdresowa::wyswietlAdresatow(){
     adresatMenedzer->wyswietlWszystkichAdresatow();
 }
-
+bool KsiazkaAdresowa::czyUzytkownikJestZalogowany(){
+    return uzytkownikMenedzer.czyUzytkownikJestZalogowany();
+}
+void KsiazkaAdresowa::wyswietlMenuGlowne(){
+    MenuTekstowe menuTekstowe;
+    wybor = menuTekstowe.wybierzOpcjeZMenuGlownego();
+}
+void KsiazkaAdresowa::wyswietlPodmenuUzytkownika(){
+    MenuTekstowe menuTekstowe;
+    wybor = menuTekstowe.wybierzOpcjeZMenuUzytkownika();
+}
 

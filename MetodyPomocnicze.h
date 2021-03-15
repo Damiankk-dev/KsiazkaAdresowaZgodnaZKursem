@@ -12,6 +12,7 @@ using namespace std;
 
 class MetodyPomocnicze{
 public:
+    char wczytajZnak();
     string konwerjsaIntNaString(int liczba);
     string wczytajLinie();
     string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);

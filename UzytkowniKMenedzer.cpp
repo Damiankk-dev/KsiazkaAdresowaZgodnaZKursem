@@ -113,4 +113,9 @@ void UzytkownikMenedzer::wylogowanieUzytkownika(){
     cout << endl << "Wylogowano uzytkownika" << endl << endl;
     system("pause");
 }
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany(){
+    if (idZalogowanegoUzytkownika > 0 ) return true;
+
+    else return false;
+}
 

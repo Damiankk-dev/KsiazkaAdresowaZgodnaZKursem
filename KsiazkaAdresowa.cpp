@@ -35,4 +35,10 @@ void KsiazkaAdresowa::wyswietlPodmenuUzytkownika(){
     MenuTekstowe menuTekstowe;
     wybor = menuTekstowe.wybierzOpcjeZMenuUzytkownika();
 }
+void KsiazkaAdresowa::usunAdresata(){
+    adresatMenedzer->usunAdresata();
+}
+void KsiazkaAdresowa::edytujAdresata(){
+    adresatMenedzer->edytujAdresata();
+}
 

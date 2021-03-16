@@ -31,5 +31,7 @@ public:
     void wyswietlAdresatow();
     void wyswietlMenuGlowne();
     void wyswietlPodmenuUzytkownika();
+    void usunAdresata();
+    void edytujAdresata();
     bool czyUzytkownikJestZalogowany();
 };

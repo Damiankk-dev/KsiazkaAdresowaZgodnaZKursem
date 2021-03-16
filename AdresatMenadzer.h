@@ -8,6 +8,7 @@
 #include "MetodyPomocnicze.h"
 #include "PlikZUzytkownikami.h"
 #include "PlikZAdresatami.h"
+#include "MenuTekstowe.h"
 
 using namespace std;
 
@@ -28,4 +29,7 @@ public:
     Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat &adresat);
     void wyswietlWszystkichAdresatow();
+    void edytujAdresata();
+    int usunAdresata();
+    int podajIdWybranegoAdresata();
 };

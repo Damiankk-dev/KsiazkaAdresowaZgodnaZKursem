@@ -5,14 +5,15 @@
 #include <vector>
 #include <fstream>
 
+#include "PlikTekstowy.h"
 #include "Uzytkownik.h"
 #include "MetodyPomocnicze.h"
 #include "Adresat.h"
 
 using namespace std;
 
-class PlikZAdresatami{
-    const string NAZWA_PLIKU_Z_ADRESATAMI;
+class PlikZAdresatami : public PlikTekstowy{
+//    const string NAZWA_PLIKU_Z_ADRESATAMI;
 
     int idOstatniegoAdresata;
     int pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami);
@@ -23,7 +24,7 @@ class PlikZAdresatami{
     Adresat pobierzDaneAdresata(string daneAdresataOddzielonePionowymiKreskami);
 
 public:
-    PlikZAdresatami(string nazwaPlikuZAdresatami) : NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami)
+    PlikZAdresatami(string nazwaPlikuZAdresatami) : PlikTekstowy(nazwaPlikuZAdresatami)
     {
     };
 

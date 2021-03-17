@@ -12,8 +12,7 @@ string MetodyPomocnicze::konwerjsaIntNaString(int liczba){
     return str;
 }
 string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst){
-    if (!tekst.empty())
-    {
+    if (!tekst.empty())    {
         transform(tekst.begin(), tekst.end(), tekst.begin(), ::tolower);
         tekst[0] = toupper(tekst[0]);
     }
@@ -22,42 +21,27 @@ string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst
 string MetodyPomocnicze::pobierzLiczbe(string tekst, int pozycjaZnaku)
 {
     string liczba = "";
-    while(isdigit(tekst[pozycjaZnaku]) == true)
-    {
+    while(isdigit(tekst[pozycjaZnaku]) == true)    {
         liczba += tekst[pozycjaZnaku];
         pozycjaZnaku ++;
     }
     return liczba;
 }
-int MetodyPomocnicze::konwersjaStringNaInt(string liczba)
-{
+int MetodyPomocnicze::konwersjaStringNaInt(string liczba){
     int liczbaInt;
     istringstream iss(liczba);
     iss >> liczbaInt;
 
     return liczbaInt;
 }
-bool MetodyPomocnicze::czyPlikJestPusty(string nazwaPliku){
-    fstream plikTekstowy;
-    plikTekstowy.open(nazwaPliku.c_str(), ios::app);
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
-
-    plikTekstowy.close();
-}
 char MetodyPomocnicze::wczytajZnak(){
     string wejscie = "";
     char znak  = {0};
 
-    while (true)
-    {
+    while (true)    {
         getline(cin, wejscie);
 
-        if (wejscie.length() == 1)
-        {
+        if (wejscie.length() == 1)        {
             znak = wejscie[0];
             break;
         }
@@ -65,18 +49,16 @@ char MetodyPomocnicze::wczytajZnak(){
     }
     return znak;
 }
-int MetodyPomocnicze::wczytajLiczbeCalkowita()
-{
+int MetodyPomocnicze::wczytajLiczbeCalkowita(){
     string wejscie = "";
     int liczba = 0;
 
-    while (true)
-    {
+    while (true)    {
         getline(cin, wejscie);
 
         stringstream myStream(wejscie);
-        if (myStream >> liczba)
-            break;
+
+        if (myStream >> liczba) break;
         cout << "To nie jest liczba. Wpisz ponownie. " << endl;
     }
     return liczba;

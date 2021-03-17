@@ -26,10 +26,10 @@ public:
         adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(ID_ZALOGOWANEGO_UZYTKOWNIKA);
     };
     void dodajAdresata();
-    Adresat podajDaneNowegoAdresata();
     void wyswietlDaneAdresata(Adresat &adresat);
     void wyswietlWszystkichAdresatow();
     void edytujAdresata();
     int usunAdresata();
     int podajIdWybranegoAdresata();
+    Adresat podajDaneNowegoAdresata();
 };

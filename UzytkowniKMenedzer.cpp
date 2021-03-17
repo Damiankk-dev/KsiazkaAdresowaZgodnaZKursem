@@ -8,7 +8,6 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika(){
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
     MetodyPomocnicze metodyPomocnicze;
 
-
     do
     {
         cout << "Podaj login: ";
@@ -60,17 +59,12 @@ int UzytkownikMenedzer::logowanieUzytkownika(){
     login = metodyPomocnicze.wczytajLinie();
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
-    while (itr != uzytkownicy.end())
-    {
-        if (itr->pobierzLogin() == login)
-        {
-            for (int iloscProb = 3; iloscProb > 0; iloscProb--)
-            {
+    while (itr != uzytkownicy.end())    {
+        if (itr->pobierzLogin() == login)        {
+            for (int iloscProb = 3; iloscProb > 0; iloscProb--)            {
                 cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
                 haslo = metodyPomocnicze.wczytajLinie();
-
-                if (itr->pobierzHaslo() == haslo)
-                {
+                if (itr->pobierzHaslo() == haslo)  {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika = itr->pobierzId();
@@ -89,17 +83,14 @@ int UzytkownikMenedzer::logowanieUzytkownika(){
     idZalogowanegoUzytkownika = 0;
     return idZalogowanegoUzytkownika;
 }
-void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika()
-{
+void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika(){
     MetodyPomocnicze metodyPomocnicze;
     string noweHaslo = "";
     cout << "Podaj nowe haslo: ";
     noweHaslo = metodyPomocnicze.wczytajLinie();
 
-    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)
-    {
-        if (itr ->pobierzId() == idZalogowanegoUzytkownika)
-        {
+    for (vector <Uzytkownik>::iterator itr = uzytkownicy.begin(); itr != uzytkownicy.end(); itr++)    {
+        if (itr ->pobierzId() == idZalogowanegoUzytkownika)        {
             itr ->ustawHaslo(noweHaslo);
             cout << "Haslo zostalo zmienione." << endl << endl;
             system("pause");
@@ -115,7 +106,6 @@ void UzytkownikMenedzer::wylogowanieUzytkownika(){
 }
 bool UzytkownikMenedzer::czyUzytkownikJestZalogowany(){
     if (idZalogowanegoUzytkownika > 0 ) return true;
-
     else return false;
 }
 

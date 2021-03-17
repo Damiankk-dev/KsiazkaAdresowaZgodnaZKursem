@@ -11,5 +11,6 @@ class MenuTekstowe{
 public:
     char wybierzOpcjeZMenuGlownego();
     char wybierzOpcjeZMenuUzytkownika();
+    char wybierzOpcjeZMenuEdycja();
 };
 #endif // MENU_TEKSTOWE

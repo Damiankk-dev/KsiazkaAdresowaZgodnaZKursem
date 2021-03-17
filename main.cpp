@@ -52,11 +52,10 @@ int main()
                 ksiazkaAresowa.wyswietlAdresatow();
                 break;
             case '5':
-//                idUsunietegoAdresata = usunAdresata(adresaci);
-//                idOstatniegoAdresata = podajIdOstatniegoAdresataPoUsunieciuWybranegoAdresata(idUsunietegoAdresata, idOstatniegoAdresata);
+                ksiazkaAresowa.usunAdresata();
                 break;
             case '6':
-//                edytujAdresata(adresaci);
+                ksiazkaAresowa.edytujAdresata();
                 break;
             case '7':
                 ksiazkaAresowa.zmianaHaslaZalogowanegoUzytkownika();

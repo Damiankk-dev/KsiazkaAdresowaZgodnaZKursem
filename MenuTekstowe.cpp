@@ -39,8 +39,7 @@ char MenuTekstowe::wybierzOpcjeZMenuUzytkownika(){
 
     return wybor;
 }
-char MenuTekstowe::wybierzOpcjeZMenuEdycja()
-{
+char MenuTekstowe::wybierzOpcjeZMenuEdycja(){
     char wybor;
     MetodyPomocnicze metodyPomocnicze;
 

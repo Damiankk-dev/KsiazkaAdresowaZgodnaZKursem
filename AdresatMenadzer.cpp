@@ -183,6 +183,18 @@ void AdresatMenadzer::wyszukajAdresatowPoNazwisku(){
         for (vector <Adresat>::iterator itr = adresaci.begin(); itr != adresaci.end(); itr++)
         {
             if (itr -> pobierzNazwisko() == nazwiskoPoszukiwanegoAdresata)
+            {
+                wyswietlDaneAdresata(*itr);
+                iloscAdresatow++;
+            }
+        }
+         wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
+    } else {
+        cout << endl << "Ksiazka adresowa jest pusta" << endl << endl;
+	}
+    cout << endl;
+    system("pause");
+}
 
 void AdresatMenadzer::wyszukajAdresatowPoImieniu(){
     MetodyPomocnicze metodyPomocnicze;
@@ -209,9 +221,9 @@ void AdresatMenadzer::wyszukajAdresatowPoImieniu(){
          wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
     } else {
         cout << endl << "Ksiazka adresowa jest pusta" << endl << endl;
+	}
     cout << endl;
     system("pause");
-	}
 }
 
 void AdresatMenadzer::wyswietlIloscWyszukanychAdresatow(int iloscAdresatow){

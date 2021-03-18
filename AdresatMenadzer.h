@@ -17,8 +17,6 @@ class AdresatMenadzer{
     PlikZAdresatami plikZAdresatami;
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
-    void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
-
 public:
     vector<Adresat> adresaci;
 

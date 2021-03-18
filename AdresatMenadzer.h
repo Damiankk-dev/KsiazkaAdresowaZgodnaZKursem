@@ -15,6 +15,7 @@ using namespace std;
 class AdresatMenadzer{
     const int ID_ZALOGOWANEGO_UZYTKOWNIKA;
     PlikZAdresatami plikZAdresatami;
+
     void wyswietlIloscWyszukanychAdresatow(int iloscAdresatow);
 
 public:

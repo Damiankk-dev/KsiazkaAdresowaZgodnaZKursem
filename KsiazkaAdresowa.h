@@ -33,5 +33,6 @@ public:
     void wyswietlPodmenuUzytkownika();
     void usunAdresata();
     void edytujAdresata();
+    void wyszukajAdresatowPoNazwisku();
     bool czyUzytkownikJestZalogowany();
 };

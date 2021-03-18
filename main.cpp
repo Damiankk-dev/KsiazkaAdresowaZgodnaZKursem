@@ -43,7 +43,7 @@ int main()
                 ksiazkaAresowa.dodajAdresata();
                 break;
             case '2':
-//                wyszukajAdresatowPoImieniu(adresaci);
+                ksiazkaAresowa.wyszukajAdresataPoImieniu();
                 break;
             case '3':
 //                wyszukajAdresatowPoNazwisku(adresaci);
